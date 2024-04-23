@@ -1,0 +1,15 @@
+<p>exercise2 works!</p>
+
+<h3>Hello there!</h3>
+<p>Please click the button to see the hidden options</p>
+<button class="btn btn-info" (click)="pressMe()">Press me!</button>
+<p  [ngClass]="{hidden: pressMeCondition}">Lorem ipsum dolor sit amet consectetur adipisicing .
+     </p>
+<div *ngFor="let items of arrayOfClicks; let i = index"
+    [ngStyle]="{backgroundColor: arrayOfClicks.length>= 5? 'blue': 'transparent'}"
+    [ngClass]="{'text':arrayOfClicks.length>= 5} ">
+      {{i +
+      ":"+items}}
+    
+
+</div>

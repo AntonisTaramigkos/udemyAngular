@@ -1,0 +1,18 @@
+<!-- <p [ngStyle]="getStyle()">Server with ID {{serverID}} is {{status}}!</p> -->
+<!-- <p>Server with ID <span [style.color]="'red'">{{serverID}}</span> is <span [style.color]="'green'">{{status}}</span>!</p> -->
+<p [ngStyle]='{backgroundColor:serveStatusColor()}'>Server with ID  is {{status}}!</p>
+
+<p >Allowed to Add new Server : {{allowNewServer}}</p>
+<button class="btn btn-primary" 
+[disabled]="!allowNewServer"
+(click)="onCreateServer()" >
+    Add server
+</button>
+<br>
+<label for="">Server Name:{{UpdateServerName}}</label>
+<!-- <input type="text" class="form-control " (input)="onUpdateServerName($event)"> -->
+<input type="text" class="form-control " [(ngModel)]="UpdateServerName">
+<!-- [<p>Server Creation Status: {{serverCreationStatus}}</p> -->
+<p *ngIf="serverCreated">Serve was created, server name is {{UpdateServerName}}</p>
+<p *ngIf="serverCreated">No Serve was created!</p>
+<!-- <app-server></app-server> -->

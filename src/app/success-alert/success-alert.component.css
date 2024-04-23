@@ -1,0 +1,6 @@
+.alert {
+    padding: 10px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    border-radius: 10px;
+}
